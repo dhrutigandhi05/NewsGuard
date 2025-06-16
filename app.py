@@ -46,7 +46,19 @@ model = LogisticRegression()
 model.fit(X_train,Y_train)
 
 # Website
-st.title('NewsGuardian Fake News Detection')
+st.title('NewsGuard Fake News Detection')
 st.subheader('Detect if a news article is real or fake')
 st.write('Enter the news article content below:')
 input_text = st.text_input('Enter news article content')
+
+def predict(input_text):
+    input_data = vector.transform([input_text])
+    predict = model.predict(input_data)
+    return predict[0]
+
+if input_text:
+    prediction = predict(input_text)
+    if prediction == 0:
+        st.success('The news article is REAL')
+    else:
+        st.error('The news article is FAKE')
