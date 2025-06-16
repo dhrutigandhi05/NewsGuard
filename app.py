@@ -1,3 +1,4 @@
+import streamlit as st
 import nltk
 nltk.download('stopwords')
 import numpy as np
@@ -43,3 +44,9 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2, stratif
 # Fit logistic regression model
 model = LogisticRegression()
 model.fit(X_train,Y_train)
+
+# Website
+st.title('NewsGuardian Fake News Detection')
+st.subheader('Detect if a news article is real or fake')
+st.write('Enter the news article content below:')
+input_text = st.text_input('Enter news article content')
