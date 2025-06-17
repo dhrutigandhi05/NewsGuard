@@ -5,8 +5,7 @@ NewsGuard is a project aimed at providing tools and resources for evaluating the
 ## Features
 
 
-- Preprocess text by removing non-letters, lowercasing, filtering out stopwords and applying Porter stemming  
-- Convert cleaned text into TF-IDF vectors  
+- Preprocess text by removing non-letters, lowercasing, filtering out stopwords and applying Porter stemming   
 - Train a logistic regression classifier on a labeled news dataset  
 - Interactive Streamlit UI for live “REAL” or “FAKE” predictions
 
